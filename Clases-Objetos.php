@@ -9,8 +9,9 @@ class Persona{
 		echo mensaje;
 	}
 }
-
+//Creacion del Objeto(instancia)
 $persona = new Persona();
+//Imprimimos
 echo $persona->nombre; 
 
 ?>
