@@ -81,7 +81,7 @@ class Estudiante{
 		//Creamos Actualizar
 		public function edit(){
 
-			$sql = "UPDATE FROM estudiantes set nombre = '{$this->nombre}', edad = '{$this->edad}',
+			$sql = "UPDATE  estudiantes set nombre = '{$this->nombre}', edad = '{$this->edad}',
 			promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}' WHERE id ='{$this->id}'";
 
 			//Llamamos a $con le pedimos que ejecute el metodo consultaSimple, parametros
@@ -94,7 +94,7 @@ class Estudiante{
 		public function view(){
 
 			$sql ="SELECT t1.*,t2.nombre as Nombre_seccion FROM estudiantes t1 INNER JOIN secciones t2 
-			ON t1.id_seccion = t2.id WHERE id = '{$this->id}'";
+			ON t1.id_seccion = t2.id WHERE t1.id = '{$this->id}'";
 
 			//Llamamos a $con le pedimos que ejecute el metodo consultaRetorno, parametros.
 

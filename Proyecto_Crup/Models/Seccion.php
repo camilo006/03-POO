@@ -33,6 +33,7 @@
 		//Creamor Registrar
 		public function add(){
 			$sql = "INSERT INTO secciones(id,nombre) VALUES (null,'{$this->nombre}')";
+			$this->con->consultaSimple($sql);
 		}
 
 		//Creamos Listar todo
@@ -44,16 +45,16 @@
 		}
 
 		//Creamos Borrar
-		public function borrar(){
+		public function delete(){
 
 			$sql = "DELETE FROM secciones WHERE id ='{$this->id}'";
 			$this->con->consultaSimple($sql);
 
 		}
 		//Creamos Actualizar
-		public function edi(){
+		public function edit(){
 
-			$sql = "UPDATE FROM secciones set nombre = '{$this->nombre}' WHERE id = '{$this->id}'";
+			$sql = "UPDATE  secciones set nombre = '{$this->nombre}' WHERE id = '{$this->id}'";
 			$this->con->consultaSimple($sql);
 		}
 
