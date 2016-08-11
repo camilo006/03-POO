@@ -27,17 +27,22 @@
 
 			//Si no existe $argumento
 			if(!isset($argumento)){
-				call_user_func(array($controlador,$metodo));
+				$datos = call_user_func(array($controlador,$metodo));
 
 			}else { 
 			//Si el metodo existe
-				call_user_func_array($controlador, $metodo),$argumento);	
+				$datos= call_user_func_array($controlador, $metodo),$argumento);	
 
 			}
 		}
 
-
-
+		//Cargar vista
+		$ruta = ROOT ."Views".DS.$request->getControlador().DS.$request->getControlador().DS.$request->getMetodo()."php";
+		if(is_readable($ruta)){
+			require_once $ruta;
+		}else{
+			print ":( No se ha encontrado la Vista";
+		}
 
 
 		}
