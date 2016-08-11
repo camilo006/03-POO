@@ -1,4 +1,4 @@
-<div class="box-principal">
+ <div class="box-principal">
 <h3 class="titulo">Listado de Estudiantes<hr></h3>
 	<div class="panel panel-success">
 	  <div class="panel-heading">

@@ -48,7 +48,7 @@
 		public function delete(){
 
 			$sql = "DELETE FROM secciones WHERE id ='{$this->id}'";
-			$this->con->consultaSimple($sql);
+			$this->con->consultaRetorno($sql);
 
 		}
 		//Creamos Actualizar
